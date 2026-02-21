@@ -1,0 +1,27 @@
+# Dependencies
+node_modules/
+.pnp
+.pnp.js
+
+# Testing
+coverage/
+
+# Production / Compiled CSS
+dist/css/style.css.map
+# (Optional: ignore dist if you want it only on the server)
+# dist/
+
+# Misc
+.DS_Store
+*.log
+
+# Yarn Berry specific (Keep this if you use Yarn 2/3/4)
+.yarn/*
+!.yarn/patches
+!.yarn/plugins
+!.yarn/releases
+!.yarn/sdks
+!.yarn/versions
+
+# If you ARE NOT using "Zero Installs", uncomment the line below:
+.yarn/cache

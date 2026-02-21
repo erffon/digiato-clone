@@ -1,0 +1,233 @@
+/* src/scss/abstracts/_mixins.scss */
+* {
+  box-sizing: border-box;
+}
+
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+
+body {
+  line-height: 1;
+}
+
+ol,
+ul {
+  list-style: none;
+}
+
+blockquote,
+q {
+  quotes: none;
+}
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: "";
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* src/scss/base/_typography.scss */
+/* 1. Light */
+@font-face {
+  font-family: "IRANSansX";
+  src: url("../assets/fonts/IRANSansX-Light.woff2") format("woff2");
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+/* 2. Regular */
+@font-face {
+  font-family: "IRANSansX";
+  src: url("../assets/fonts/IRANSansX-Regular.woff2") format("woff2");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+/* 3. Medium */
+@font-face {
+  font-family: "IRANSansX";
+  src: url("../assets/fonts/IRANSansX-Medium.woff2") format("woff2");
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+/* 4. DemiBold */
+@font-face {
+  font-family: "IRANSansX";
+  src: url("../assets/fonts/IRANSansX-DemiBold.woff2") format("woff2");
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+/* 5. Bold */
+@font-face {
+  font-family: "IRANSansX";
+  src: url("../assets/fonts/IRANSansX-Bold.woff2") format("woff2");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+/* 6. ExtraBold */
+@font-face {
+  font-family: "IRANSansX";
+  src: url("../assets/fonts/IRANSansX-ExtraBold.woff2") format("woff2");
+  font-weight: 800;
+  font-style: normal;
+  font-display: swap;
+}
+/* 7. Black */
+@font-face {
+  font-family: "IRANSansX";
+  src: url("../assets/fonts/IRANSansX-Black.woff2") format("woff2");
+  font-weight: 900;
+  font-style: normal;
+  font-display: swap;
+}
+.container {
+  width: 100%;
+  max-width: 90rem;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+@media (min-width: 992px) {
+  .container {
+    padding-left: 2rem;
+    padding-right: 2rem;
+  }
+}
+
+.site-header {
+  padding: 1.5rem 0.75rem;
+  background-color: #f7f9fd;
+}
+.site-header__fluid {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.site-header__icons {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+}
+.site-header__icons img {
+  width: 2rem;
+  height: 2rem;
+}
+.site-header__icons img:hover {
+  cursor: pointer;
+  filter: invert(17%) sepia(87%) saturate(2945%) hue-rotate(211deg) brightness(92%) contrast(108%);
+  transition: all 0.2s ease-out;
+}
+
+/*# sourceMappingURL=style.css.map */
