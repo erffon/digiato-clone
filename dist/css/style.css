@@ -217,45 +217,84 @@ a {
 .site-header__fluid {
   display: flex;
   align-items: center;
+  flex-direction: row-reverse;
+}
+.site-header__fluid img {
+  width: 6rem;
+}
+@media (min-width: 992px) {
+  .site-header__fluid {
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+  }
+}
+.site-header__fluid {
   justify-content: space-between;
 }
 .site-header__icons {
   display: flex;
   align-items: center;
+  flex-direction: row;
   gap: 1.5rem;
 }
-.site-header .fa-sistrix {
-  font-size: 1.5rem;
-  color: #888dab;
+.site-header .fa-sistrix,
+.site-header .fa-user {
+  display: none;
 }
-.site-header .fa-sistrix:hover {
-  color: #1a73e8;
-  transform: scale(120%);
-  transition: all 0.2s ease-out;
+@media (min-width: 992px) {
+  .site-header .fa-sistrix,
+  .site-header .fa-user {
+    display: block;
+  }
 }
+.site-header .fa-sistrix,
 .site-header .fa-user {
   font-size: 1.5rem;
   color: #888dab;
 }
+.site-header .fa-sistrix:hover,
 .site-header .fa-user:hover {
   color: #1a73e8;
   transform: scale(120%);
   transition: all 0.2s ease-out;
 }
+.site-header .fa-bars {
+  font-size: 2rem;
+  color: #888dab;
+}
+.site-header .fa-bars:hover {
+  color: #1a73e8;
+  transition: all 0.2s ease-out;
+}
+@media (min-width: 992px) {
+  .site-header .fa-bars {
+    display: none;
+  }
+}
 
 .site-nav {
-  display: flex;
-  align-items: center;
-  background-color: #f0f4fc;
+  display: none;
+}
+@media (min-width: 992px) {
+  .site-nav {
+    display: block;
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    background-color: #f0f4fc;
+  }
 }
 .site-nav .container {
   display: flex;
   align-items: center;
+  flex-direction: row;
   justify-content: space-between;
 }
 .site-nav__menu {
   display: flex;
   align-items: center;
+  flex-direction: row;
 }
 .site-nav__menu li {
   padding: 1.5rem 1.25rem;
@@ -267,6 +306,7 @@ a {
 .site-nav__tags {
   display: flex;
   align-items: center;
+  flex-direction: row;
   gap: 0.875rem;
 }
 .site-nav__tags p {
@@ -278,6 +318,7 @@ a {
 .site-nav__tags__items {
   display: flex;
   align-items: center;
+  flex-direction: row;
   gap: 1.5rem;
 }
 .site-nav__tags__items li a {
