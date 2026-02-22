@@ -1,0 +1,113 @@
+// 1. Load Abstracts (Variables, Functions, Mixins)
+// These don't output CSS, but provide the tools for files below
+@use "abstracts/variables" as v;
+@use "abstracts/functions" as f;
+@use "abstracts/mixins" as m;
+
+// 2. Load the Reset (MUST be the first outputting CSS file)
+@use "base/reset";
+
+// 3. Load other Base styles
+@use "base/typography";
+@use "base/layout";
+
+// 4. Load Components
+@use "components/header";
+
+.site-header {
+  padding: v.$space-lg f.rem(12);
+  background-color: v.$color-bg-box;
+
+  &__fluid {
+    @include m.flex-center-reverse;
+
+    img {
+      width: f.rem(96);
+    }
+
+    // responsive -- Desktop
+    @include m.respond-to("lg") {
+      @include m.flex-center;
+    }
+    justify-content: space-between;
+  }
+
+  &__icons {
+    @include m.flex-center;
+    gap: v.$space-lg;
+  }
+
+  .fa-sistrix,
+  .fa-user {
+    display: none;
+
+    // responsive -- Desktop
+    @include m.respond-to("lg") {
+      display: block;
+    }
+    font-size: f.rem(24);
+    color: v.$color-icon;
+    &:hover {
+      color: v.$color-brand;
+      transform: scale(120%);
+      @include m.transition-animation;
+    }
+  }
+
+  .fa-bars {
+    font-size: f.rem(32);
+    color: v.$color-icon;
+    &:hover {
+      color: v.$color-brand;
+      @include m.transition-animation;
+    }
+    // responsive -- Desktop
+    @include m.respond-to("lg") {
+      display: none;
+    }
+  }
+}
+.site-nav {
+  display: none;
+  @include m.respond-to("lg") {
+    display: block;
+    @include m.flex-center;
+    background-color: v.$color-bg-gray-secondary;
+  }
+
+  .container {
+    @include m.flex-center;
+    justify-content: space-between;
+  }
+
+  &__menu {
+    @include m.flex-center;
+
+    li {
+      padding: f.rem(24) f.rem(20);
+      font-size: f.rem(16);
+      a {
+        color: v.$color-text-header;
+      }
+    }
+  }
+  &__tags {
+    @include m.flex-center;
+    gap: f.rem(14);
+
+    p {
+      gap: f.rem(14);
+      color: v.$color-text-header;
+      font-size: f.rem(16);
+      font-weight: 500;
+    }
+    &__items {
+      @include m.flex-center;
+      gap: f.rem(24);
+      li a {
+        color: v.$color-text-header-secondary;
+        font-size: f.rem(12);
+      }
+    }
+  }
+}
