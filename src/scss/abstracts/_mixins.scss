@@ -1,5 +1,6 @@
 /* src/scss/abstracts/_mixins.scss */
 @use "variables" as v;
+@use "functions" as f;
 
 @mixin respond-to($breakpoint) {
   @if $breakpoint == "sm" {
@@ -33,4 +34,16 @@
 }
 @mixin transition-animation {
   transition: all 0.2s ease-out;
+}
+@mixin red-rect {
+  display: block;
+  content: "";
+  width: f.rem(8);
+  height: f.rem(16);
+  background-color: v.$color-brand-secondary;
+  position: absolute;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  border-radius: f.rem(2);
 }
