@@ -608,6 +608,10 @@
     .latest__items {
       width: calc(100% - 320px);
       padding-left: f.rem(100);
+      display: flex;
+      flex-direction: column;
+      gap: f.rem(24);
+      align-items: center;
 
       ul {
         li {
@@ -705,6 +709,34 @@
         border-color: v.$color-border;
         padding-bottom: f.rem(24);
         margin-bottom: f.rem(24);
+      }
+
+      .btn-more__container {
+        width: 100%;
+
+        .btn-more__item {
+          display: block;
+          border: 2px solid v.$color-brand-secondary;
+          padding: f.rem(10) f.rem(16);
+          border-radius: 16px;
+          color: v.$color-brand-secondary;
+          font-family: "IranSansX";
+          background-color: white;
+          font-size: f.rem(14);
+          font-weight: 600;
+          line-height: 150%;
+          margin: f.rem(24) auto;
+          width: fit-content;
+          display: flex;
+          gap: 8px;
+          align-items: center;
+
+          &:hover {
+            background-color: v.$color-brand-secondary;
+            color: white;
+            @include m.transition-animation;
+          }
+        }
       }
     }
 
