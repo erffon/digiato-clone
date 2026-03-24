@@ -705,3 +705,77 @@
     }
   }
 }
+
+// social media CTA
+.cta-section--lg {
+  display: none;
+  @include m.respond-to("lg") {
+    display: block;
+  }
+
+  .container {
+    .social-banner {
+      border: 4px solid #ddedfc;
+      border-radius: 16px;
+      padding: f.rem(75);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      position: relative;
+      overflow: hidden;
+
+      &__content {
+        width: 50%;
+        .heading {
+          font-size: f.rem(32);
+          margin-bottom: f.rem(8);
+          font-weight: 800;
+          color: v.$color-text-dark-subheader;
+          line-height: 200%;
+        }
+        .desc {
+          font-size: f.rem(18);
+          font-weight: 500;
+          margin-bottom: f.rem(40);
+          color: v.$color-text-header-secondary;
+          line-height: 200%;
+        }
+        .icons {
+          display: flex;
+          gap: f.rem(16);
+
+          i {
+            font-size: f.rem(30);
+            color: v.$color-brand-secondary;
+            @include m.transition-animation;
+
+            &:hover {
+              transform: scale(95%);
+              @include m.transition-animation;
+            }
+          }
+        }
+      }
+
+      &__img {
+        width: 25%;
+        height: 100%;
+        background-color: #ddedfc;
+        border-top-right-radius: 50%;
+        border-bottom-right-radius: 50%;
+        position: absolute;
+        left: 0;
+        top: 0;
+        transform: scale(200%);
+        z-index: -1;
+
+        img {
+          position: absolute;
+          left: 5%;
+          top: 50%;
+          transform: translateY(-50%) scale(50%);
+        }
+      }
+    }
+  }
+}
