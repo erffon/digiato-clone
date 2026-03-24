@@ -712,6 +712,7 @@
   @include m.respond-to("lg") {
     display: block;
   }
+  margin-bottom: f.rem(40);
 
   .container {
     .social-banner {

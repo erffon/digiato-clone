@@ -1320,6 +1320,9 @@ body {
     display: block;
   }
 }
+.cta-section--lg {
+  margin-bottom: 2.5rem;
+}
 .cta-section--lg .container .social-banner {
   border: 4px solid #ddedfc;
   border-radius: 16px;
