@@ -1,5 +1,5 @@
 $(document).ready(function () {
-  $(".hero-section__carousel").slick({
+  $(".thumb-carousel").slick({
     rtl: true,
     centerMode: false,
     slidesToShow: 1.2,
