@@ -1157,6 +1157,30 @@ body {
   padding-bottom: 1rem;
   border-bottom: 1px solid #e0e0e0;
 }
+.latest-section__content--sm .btn-more__container {
+  width: 100%;
+}
+.latest-section__content--sm .btn-more__container .btn-more__item {
+  border: 2px solid #f15928;
+  padding: 0.625rem 1rem;
+  border-radius: 16px;
+  color: #f15928;
+  font-family: "IranSansX";
+  background-color: white;
+  font-size: 0.875rem;
+  font-weight: 600;
+  line-height: 150%;
+  margin: 1.5rem auto;
+  display: flex;
+  gap: 8px;
+  align-items: center;
+  justify-content: center;
+}
+.latest-section__content--sm .btn-more__container .btn-more__item:hover {
+  background-color: #f15928;
+  color: white;
+  transition: all 0.2s ease-out;
+}
 .latest-section__content--lg {
   display: none;
 }
@@ -1264,7 +1288,7 @@ body {
   width: 100%;
 }
 .latest-section__content--lg .latest__items .btn-more__container .btn-more__item {
-  display: block;
+  width: fit-content;
   border: 2px solid #f15928;
   padding: 0.625rem 1rem;
   border-radius: 16px;
@@ -1275,10 +1299,10 @@ body {
   font-weight: 600;
   line-height: 150%;
   margin: 1.5rem auto;
-  width: fit-content;
   display: flex;
   gap: 8px;
   align-items: center;
+  justify-content: center;
 }
 .latest-section__content--lg .latest__items .btn-more__container .btn-more__item:hover {
   background-color: #f15928;

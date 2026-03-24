@@ -181,3 +181,25 @@
     }
   }
 }
+@mixin btn-more {
+  border: 2px solid v.$color-brand-secondary;
+  padding: f.rem(10) f.rem(16);
+  border-radius: 16px;
+  color: v.$color-brand-secondary;
+  font-family: "IranSansX";
+  background-color: white;
+  font-size: f.rem(14);
+  font-weight: 600;
+  line-height: 150%;
+  margin: f.rem(24) auto;
+  display: flex;
+  gap: 8px;
+  align-items: center;
+  justify-content: center;
+
+  &:hover {
+    background-color: v.$color-brand-secondary;
+    color: white;
+    @include transition-animation;
+  }
+}

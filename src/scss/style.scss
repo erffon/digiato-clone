@@ -533,6 +533,14 @@
     .square-thumb-vert__items {
       @include m.square-thumb-vert;
     }
+
+    .btn-more__container {
+      width: 100%;
+
+      .btn-more__item {
+        @include m.btn-more;
+      }
+    }
   }
 
   &__content--lg {
@@ -652,27 +660,8 @@
         width: 100%;
 
         .btn-more__item {
-          display: block;
-          border: 2px solid v.$color-brand-secondary;
-          padding: f.rem(10) f.rem(16);
-          border-radius: 16px;
-          color: v.$color-brand-secondary;
-          font-family: "IranSansX";
-          background-color: white;
-          font-size: f.rem(14);
-          font-weight: 600;
-          line-height: 150%;
-          margin: f.rem(24) auto;
           width: fit-content;
-          display: flex;
-          gap: 8px;
-          align-items: center;
-
-          &:hover {
-            background-color: v.$color-brand-secondary;
-            color: white;
-            @include m.transition-animation;
-          }
+          @include m.btn-more;
         }
       }
     }
