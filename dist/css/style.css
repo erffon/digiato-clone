@@ -685,10 +685,10 @@ body {
   position: relative;
   border-radius: 0.75rem;
 }
-.hero-section--lg .thumb-grid--lg .thumb-grid__item:hover .grid__item__picture {
+.hero-section--lg .thumb-grid--lg .thumb-grid__item:hover .thumb-grid__item__picture {
   transform: scale(1.05);
 }
-.hero-section--lg .thumb-grid--lg .thumb-grid__item:hover .grid__item__content .content__title {
+.hero-section--lg .thumb-grid--lg .thumb-grid__item:hover .thumb-grid__item__content .content__title {
   background-color: rgba(22, 32, 91, 0.6509803922);
 }
 .hero-section--lg .thumb-grid--lg .thumb-grid__item__picture {

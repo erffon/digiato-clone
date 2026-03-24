@@ -228,10 +228,10 @@
       position: relative;
       border-radius: f.rem(12);
 
-      &:hover .grid__item__picture {
+      &:hover .thumb-grid__item__picture {
         transform: scale(1.05);
       }
-      &:hover .grid__item__content .content__title {
+      &:hover .thumb-grid__item__content .content__title {
         background-color: rgba(22, 32, 91, 0.6509803922);
       }
 
