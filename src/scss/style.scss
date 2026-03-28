@@ -772,11 +772,11 @@
 
 // category contents - 2col
 .cat-contents-section--2col {
-  margin-bottom: f.rem(80);
   display: none;
   @include m.respond-to("lg") {
     display: block;
   }
+  margin-bottom: f.rem(80);
   .cat--2col__title {
     display: flex;
     justify-content: space-between;
@@ -796,9 +796,12 @@
     display: flex;
     align-items: stretch;
     justify-content: space-between;
+    gap: f.rem(24);
 
     .featured {
-      width: 65%;
+      display: flex;
+      flex: 1;
+      width: 60%;
       position: relative;
       overflow: hidden;
       border-radius: 8px;
@@ -880,6 +883,10 @@
         display: flex;
         gap: f.rem(16);
         align-items: center;
+
+        &:not(:first-child) {
+          margin-top: f.rem(8);
+        }
 
         .thumbnail {
           width: f.rem(100);
