@@ -1701,7 +1701,7 @@ body {
   transform: scale(100%);
   transition: all 0.2s ease-out;
 }
-.cat-contents-section--3col .cat-content-col__list__item .thumbnail:hover img {
+.cat-contents-section--3col .cat-content-col__list__item:hover .thumbnail img {
   transform: scale(105%);
   transition: all 0.2s ease-out;
 }

@@ -981,10 +981,10 @@
             transform: scale(100%);
             @include m.transition-animation;
           }
-          &:hover img {
-            transform: scale(105%);
-            @include m.transition-animation;
-          }
+        }
+        &:hover .thumbnail img {
+          transform: scale(105%);
+          @include m.transition-animation;
         }
 
         .meta {
