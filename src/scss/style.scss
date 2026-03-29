@@ -883,7 +883,7 @@
   }
 }
 
-//category contents - 3col
+// category contents - 3col
 .cat-contents-section--3col {
   display: none;
   @include m.respond-to("lg") {
@@ -1001,6 +1001,118 @@
             color: v.$color-text-blue-title;
           }
         }
+      }
+    }
+  }
+}
+
+// Footer
+.site-footer {
+  background-color: v.$color-bg-box;
+  padding: f.rem(40) 0;
+
+  .cta {
+    display: flex;
+    justify-content: space-evenly;
+    gap: f.rem(32);
+    padding-bottom: f.rem(40);
+    border-bottom: 1px solid #e1eaf9;
+
+    &__text {
+      &__title {
+        font-size: f.rem(16);
+        line-height: 150%;
+        color: v.$color-text-dark-subheader;
+        font-weight: 700;
+        margin-bottom: f.rem(6);
+      }
+      &__desc {
+        font-size: f.rem(14);
+        line-height: 200%;
+        color: v.$color-text-header-secondary;
+        font-weight: 400;
+      }
+    }
+    &__icons {
+      display: flex;
+      align-items: center;
+      gap: f.rem(16);
+
+      i {
+        font-size: f.rem(28);
+        color: v.$color-brand-secondary;
+        @include m.transition-animation;
+
+        &:hover {
+          transform: scale(95%);
+          @include m.transition-animation;
+        }
+      }
+    }
+  }
+
+  .footer__links {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: start;
+    padding: f.rem(40) f.rem(20);
+
+    &__item {
+      flex: 1;
+
+      .title {
+        color: v.$color-brand-dark-blue;
+        font-size: f.rem(18);
+        font-weight: 500;
+        margin-bottom: f.rem(16);
+      }
+
+      .links {
+        li {
+          position: relative;
+        }
+        a {
+          color: v.$color-text-header-secondary;
+          font-size: f.rem(14);
+          font-weight: 400;
+          line-height: 200%;
+          padding-right: 10px;
+
+          &::before {
+            content: "";
+            width: 4px;
+            height: 4px;
+            display: block;
+            background-color: v.$color-text-header-secondary;
+            position: absolute;
+            right: 0;
+            top: 50%;
+            transform: translateY(-50%);
+          }
+        }
+      }
+    }
+  }
+}
+
+// copyright section
+.site__copyright {
+  background-color: v.$color-bg-gray-secondary;
+  padding: f.rem(24) 0;
+
+  .container {
+    p {
+      color: v.$color-text-header-secondary;
+      line-height: 150%;
+      text-align: center;
+      font-size: f.rem(12);
+      font-weight: 400;
+    }
+    a {
+      color: v.$color-brand;
+      &:hover {
+        color: v.$color-brand-dark-blue;
       }
     }
   }
