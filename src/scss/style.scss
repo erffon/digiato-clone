@@ -1054,12 +1054,12 @@
   .footer__links {
     display: flex;
     flex-wrap: wrap;
-    justify-content: center;
+    justify-content: space-evenly;
     align-items: start;
-    padding: f.rem(40) f.rem(20);
 
     &__item {
-      flex: 1;
+      // flex: 1;
+      padding: f.rem(40) f.rem(20);
 
       .title {
         color: v.$color-brand-dark-blue;
