@@ -1,4 +1,5 @@
-// postcss.config.js
-module.exports = {
-  plugins: [require("autoprefixer")],
+export default {
+  plugins: {
+    autoprefixer: {},
+  },
 };
