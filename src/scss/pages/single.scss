@@ -200,6 +200,29 @@
           }
         }
       }
+
+      &__tags {
+        display: flex;
+        align-items: center;
+        gap: f.rem(8);
+        flex-wrap: wrap;
+        margin: f.rem(32) 0;
+        li {
+          a {
+            color: v.$color-brand-dark-blue;
+            font-size: f.rem(14);
+            line-height: 200%;
+            font-weight: 600;
+            padding: f.rem(8) f.rem(16);
+            border-radius: f.rem(8);
+            background-color: v.$color-bg-gray-secondary;
+
+            &:hover {
+              background-color: v.$color-bg-gray;
+            }
+          }
+        }
+      }
     }
     .sidebar {
       flex-grow: 1;
