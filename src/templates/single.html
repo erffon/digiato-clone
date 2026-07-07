@@ -32,6 +32,9 @@
             <img
               src="../assets/images/content/avatar.jpg"
               alt="author avatar"
+              fetchpriority="high"
+              decoding="sync"
+              loading="eager"
             />
             <div class="cover__title--author-info">
               <h4 class="cover__title--author-name">محمد عرفان رنجبران</h4>
@@ -61,7 +64,7 @@
     <section class="content-section">
       <div class="container">
         <!-- content body-->
-        <div class="content-body">
+        <section class="content-body">
           <div class="content-body__main">
             <p>
               آنتروپیک که با مدل‌های قدرتمند هوش مصنوعی خود در دنیای فناوری
@@ -144,14 +147,38 @@
               تا زیرساخت‌های فیزیکی لازم را برای این مأموریت بزرگ فراهم آورد.
             </p>
           </div>
+          <!-- tags -->
           <ul class="content-body__tags">
             <li><a href="#">آنتروپیک</a></li>
             <li><a href="#">هوش مصنوعی</a></li>
             <li><a href="#">تکنولوژی</a></li>
           </ul>
-        </div>
+          <!-- author -->
+          <div class="content-body__author">
+            <div class="avatar-social">
+              <div class="author-avatar">
+                <img
+                  src="../assets/images/content/avatar.jpg"
+                  alt="author avatar"
+                  decoding="async"
+                  loading="lazy"
+                />
+                <h3 class="author-name">محمد عرفان رنجبران</h3>
+              </div>
+              <div class="author-social">
+                
+                  <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+                  <a href="#"><i class="fa-brands fa-twitter"></i></a>
+                  <a href="#"><i class="fa-brands fa-linkedin-in"></i></a>
+                  <a href="#"><i class="fa-brands fa-telegram-plane"></i></a>
+              </div>
+            </div>
+            <p class="author-info">دانش‌آموخته‌ زبان‌شناسی‌ هستم و همان‌قدر که به «کلمه» علاقه‌مندم، از سرک‌کشیدن به گوشه‌وکنارِ جهان تکنولوژی و علم هم حظ می‌کنم.دانش‌آموخته‌ زبان‌شناسی‌ هستم و همان‌قدر که به «کلمه» علاقه‌مندم، از سرک‌کشیدن به گوشه‌وکنارِ جهان تکنولوژی و علم هم حظ می‌کنم.</p>
+
+          </div>
+        </section>
         <!-- sidebar -->
-        <div class="sidebar">
+        <aside class="sidebar">
           <section class="sidebar__latest-content">
             <p class="latest-section__title">جدیدترین‌ها</p>
             <ul class="vertical-side--lg">
@@ -223,7 +250,7 @@
                 </li>
               </ul>
           </section>
-        </div>
+        </aside>
       </div>
     </section>
   </article>

@@ -223,6 +223,58 @@
           }
         }
       }
+
+      &__author {
+        background-color: v.$color-bg-gray-secondary;
+        padding: f.rem(24);
+        border-radius: f.rem(16);
+        margin: f.rem(42) 0;
+
+        .avatar-social {
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+          gap: f.rem(16);
+          margin-bottom: f.rem(16);
+
+          .author-avatar {
+            display: flex;
+            align-items: center;
+            gap: f.rem(16);
+
+            h3 {
+              color: v.$color-brand-dark-blue;
+              font-size: f.rem(16);
+              line-height: 150%;
+              font-weight: 700;
+            }
+            img {
+              width: f.rem(64);
+              aspect-ratio: 1/1;
+              border-radius: 100%;
+            }
+          }
+          .author-social {
+            display: flex;
+            align-items: center;
+            gap: f.rem(16);
+
+            i {
+              font-size: f.rem(24);
+              color: v.$color-text-header-secondary;
+
+              &:hover {
+                color: v.$color-brand-secondary;
+              }
+            }
+          }
+        }
+        .author-info {
+          color: v.$color-text-header;
+          line-height: 180%;
+          font-size: f.rem(16);
+        }
+      }
     }
     .sidebar {
       flex-grow: 1;
