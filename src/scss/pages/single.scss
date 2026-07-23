@@ -2,6 +2,10 @@
 @use "../abstracts/functions" as f;
 @use "../abstracts/mixins" as m;
 
+main {
+  overflow-x: hidden;
+}
+
 .breadcrumb {
   width: 100%;
   padding: f.rem(24) 0;
@@ -31,11 +35,12 @@
 
 .cover-section {
   padding-bottom: f.rem(72);
+
   .container {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    flex-grow: 1;
+    gap: f.rem(24);
     flex-direction: column-reverse;
 
     @include m.respond-to("lg") {
@@ -43,13 +48,22 @@
     }
 
     .cover__img {
-      width: 100%;
+      @include m.respond-to("md") {
+        flex: 2;
+      }
       img {
+        width: 100%;
+        height: 100%;
+        aspect-ratio: 16/9;
+        object-fit: cover;
         border-radius: 16px;
       }
     }
 
     .cover__title {
+      @include m.respond-to("md") {
+        flex: 1.5;
+      }
       @include m.respond-to("lg") {
         padding-left: f.rem(72);
       }
