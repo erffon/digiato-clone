@@ -13,7 +13,10 @@
 
     li {
       a {
-        font-size: f.rem(14);
+        font-size: f.rem(12);
+        @include m.respond-to ('md'){
+          font-size: f.rem(14);
+        }
         color: v.$color-text-header-secondary;
         &:hover {
           color: v.$color-brand;
@@ -171,11 +174,11 @@
   width: 100%;
   .container {
     display: flex;
-    gap: f.rem(100);
 
     flex-direction: column;
     @include m.respond-to("lg") {
       flex-direction: row;
+      gap: f.rem(100);
     }
 
     .content-body {
@@ -188,7 +191,7 @@
           line-height: 200%;
           margin-bottom: f.rem(24);
           font-weight: 300;
-          font-size: f.rem(15);
+          font-size: f.rem(16);
 
           @include m.respond-to("md") {
             font-size: f.rem(18);
@@ -210,13 +213,22 @@
           line-height: 150%;
         }
         h2 {
-          font-size: f.rem(24);
+          font-size: f.rem(20);
+          @include m.respond-to("md") {
+            font-size: f.rem(24);
+          }
         }
         h3 {
           font-size: f.rem(20);
+          @include m.respond-to("md") {
+            font-size: f.rem(18);
+          }
         }
         h4 {
           font-size: f.rem(18);
+          @include m.respond-to("md") {
+            font-size: f.rem(17);
+          }
         }
         figure {
           margin-bottom: f.rem(24);
@@ -263,9 +275,14 @@
         .avatar-social {
           display: flex;
           align-items: center;
-          justify-content: space-between;
+          justify-content: center;
           gap: f.rem(16);
           margin-bottom: f.rem(16);
+          flex-wrap: wrap;
+
+          @include m.respond-to('md'){
+            justify-content: space-between;
+          }
 
           .author-avatar {
             display: flex;
@@ -302,7 +319,10 @@
         .author-info {
           color: v.$color-text-header;
           line-height: 180%;
-          font-size: f.rem(16);
+          font-size: f.rem(14);
+          @include m.respond-to("md") {
+            font-size: f.rem(16);
+          }
         }
       }
     }
@@ -310,6 +330,7 @@
       flex-grow: 1;
       flex-basis: 0;
       display: flex;
+      margin-bottom: f.rem(42);
 
       .latest-section {
         &__title {
