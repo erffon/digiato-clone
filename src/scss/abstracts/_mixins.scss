@@ -15,8 +15,16 @@
     @media (min-width: v.$breakpoint-lg) {
       @content;
     }
+  } @else if $breakpoint == "xlg" {
+    @media (min-width: v.$breakpoint-xlg) {
+      @content;
+    }
   } @else if $breakpoint == "xl" {
     @media (min-width: v.$breakpoint-xl) {
+      @content;
+    }
+  } @else if $breakpoint == "xxl" {
+    @media (min-width: v.$breakpoint-xxl) {
       @content;
     }
   }
