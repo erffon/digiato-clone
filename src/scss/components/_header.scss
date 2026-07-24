@@ -88,6 +88,10 @@
   &__tags {
     @include m.flex-center;
     gap: f.rem(14);
+    display: none;
+    @include m.respond-to("xl") {
+      display: flex;
+    }
 
     p {
       gap: f.rem(14);
