@@ -48,7 +48,7 @@
 
     .cover__img {
       @include m.respond-to("md") {
-        flex: 2;
+        flex: 1.2;
       }
       img {
         width: 100%;
@@ -61,7 +61,7 @@
 
     .cover__title {
       @include m.respond-to("md") {
-        flex: 1.5;
+        flex: 1;
       }
       @include m.respond-to("lg") {
         padding-left: f.rem(72);
