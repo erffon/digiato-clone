@@ -1,3 +1,52 @@
 @use "../abstracts/variables" as v;
 @use "../abstracts/functions" as f;
 @use "../abstracts/mixins" as m;
+
+.about-intro-section {
+    padding: f.rem(54) 0;
+    &__body {
+        display: flex;
+        gap: f.rem(32);
+        align-items: center;
+        flex-direction: column-reverse;
+        @include m.respond-to('lg') {
+            flex-direction: row;
+        }
+
+        &--text {
+            flex:1;
+            display: flex;
+            flex-direction: column;
+            line-height: 1.8;
+            color:v.$color-text-main;
+
+            h2{
+                font-weight: 700;
+                color: v.$color-text-header;
+                @include m.main-title;
+                 font-size: f.rem(20);
+                 @include m.respond-to('lg') {
+            font-size: f.rem(24);
+        }
+            }
+            p{
+                color: v.$color-text-muted;
+                
+                font-size: f.rem(14);
+                 @include m.respond-to('lg') {
+            font-size: f.rem(16);
+        }
+            }
+            
+        }
+        &--image {
+            flex:1;
+            img{
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+                border-radius: f.rem(16);
+            }
+        }
+    }
+}
