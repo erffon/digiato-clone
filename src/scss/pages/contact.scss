@@ -1,0 +1,79 @@
+@use "../abstracts/variables" as v;
+@use "../abstracts/functions" as f;
+@use "../abstracts/mixins" as m;
+
+.contact-section {
+   
+.container {
+
+    display: flex;
+    margin:f.rem(54) 0;
+    gap:f.rem(64);
+    
+    .form-section {
+        flex:1;
+background-color: v.$color-bg-gray-secondary;
+padding: f.rem(32);
+border-radius: f.rem(16);
+        &__title {
+            @include m.main-title;
+            margin-bottom: f.rem(18);
+        }
+
+        &__subtitle {
+            color:v.$color-text-header;
+            font-size: f.rem(14);
+        }
+    }
+}
+    
+}
+.hero-img {
+    flex:1;
+    aspect-ratio: 16/9;
+    
+    img {
+        border-radius: 16px;
+        width: 100%;
+    height: 100%;
+    object-fit: cover;
+    }
+}
+
+.contact-form {
+    margin:f.rem(32) 0;
+    &__group {
+        display: flex;
+        gap:f.rem(16);
+    }
+    &__item {
+        width:100%;
+        display: flex;
+        flex-direction: column;
+        gap:f.rem(14);
+        margin-bottom: f.rem(16);
+        label {
+            color:v.$color-text-muted;
+            font-size: f.rem(14);
+        }
+        input , textarea {
+            padding: f.rem(16);
+            border-radius: f.rem(14);
+            border: 1px solid v.$color-border;
+            color:v.$color-text-date;
+
+            &::placeholder {
+ font-family: 'IRANSansX';
+ color: v.$color-text-date;
+            }
+            &::-ms-value {
+                color: v.$color-text-date;
+            }
+        }
+        textarea {
+            min-height: f.rem(120);
+            resize: none;
+             font-family: 'IRANSansX';
+        }
+    }
+}
