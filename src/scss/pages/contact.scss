@@ -7,11 +7,19 @@
 .container {
 
     display: flex;
-    margin:f.rem(54) 0;
-    gap:f.rem(64);
+    flex-direction: column-reverse;
+    gap: f.rem(0);
+    @include m.respond-to('lg'){
+        flex-direction: row;
+        gap:f.rem(24);
+    }
+    justify-content: space-around;
     
     .form-section {
-        flex:1;
+        margin:0 0 f.rem(24) 0;
+        @include m.respond-to('lg'){
+            margin:f.rem(54) 0;
+        }
 background-color: v.$color-bg-gray-secondary;
 padding: f.rem(32);
 border-radius: f.rem(16);
@@ -29,8 +37,11 @@ border-radius: f.rem(16);
     
 }
 .hero-img {
-    flex:1;
     aspect-ratio: 16/9;
+    margin:f.rem(24) 0;
+    @include m.respond-to('lg'){
+        margin:f.rem(54) 0;
+    }
     
     img {
         border-radius: 16px;
@@ -42,16 +53,27 @@ border-radius: f.rem(16);
 
 .contact-form {
     margin:f.rem(32) 0;
+    width: 100%;
+    
+   
     &__group {
         display: flex;
-        gap:f.rem(16);
+         gap: f.rem(0);
+         flex-direction: column;
+        @include m.respond-to('lg'){
+            flex-direction: row;
+            gap:f.rem(24);
+        }
+         
     }
     &__item {
-        width:100%;
         display: flex;
         flex-direction: column;
         gap:f.rem(14);
         margin-bottom: f.rem(16);
+        @include m.respond-to('lg'){
+            margin-bottom: f.rem(16);
+        }
         label {
             color:v.$color-text-muted;
             font-size: f.rem(14);
@@ -60,7 +82,12 @@ border-radius: f.rem(16);
             padding: f.rem(16);
             border-radius: f.rem(14);
             border: 1px solid v.$color-border;
-            color:v.$color-text-date;
+            color:v.$color-text-muted;
+            flex:1;
+            &:focus {
+                outline: 1px solid v.$color-text-muted;
+            }
+            
 
             &::placeholder {
  font-family: 'IRANSansX';
