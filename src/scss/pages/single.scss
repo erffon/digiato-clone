@@ -121,7 +121,7 @@
           flex-direction: column;
           gap: f.rem(4);
         }
-        
+
         &-name {
           color: v.$color-text-header-secondary;
           line-height: 150%;
@@ -186,8 +186,12 @@
     }
 
     .content-body {
+      
       flex-grow: 2;
       flex-basis: 0;
+      @include m.respond-to('lg'){
+        padding-right: f.rem(70);
+      }
 
       &__main {
         p {
