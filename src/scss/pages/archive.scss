@@ -2,6 +2,10 @@
 @use '../abstracts/functions' as f;
 @use '../abstracts/mixins' as m;
 
+.main-layout {
+ margin-bottom: f.rem(32);
+}
+
 .breadcrumb {
  width: 100%;
  padding: f.rem(24) 0;
@@ -33,11 +37,10 @@
 }
 
 .archive-title {
- padding: 0 f.rem(32);
- margin: f.rem(32) 0 f.rem(32) 0;
+ margin-bottom: f.rem(72);
  h1 {
   @include m.main-title;
-  margin: f.rem(32) 0 f.rem(24) 0;
+  margin: f.rem(24) 0;
   color: v.$color-text-header-secondary;
 
   span {
@@ -47,6 +50,7 @@
  &__desc {
   font-size: f.rem(14);
   color: v.$color-text-date;
+  line-height: 150%;
 
   @include m.respond-to('md') {
    font-size: f.rem(16);
@@ -56,7 +60,7 @@
 
 .two-column-layout {
  display: flex;
- flex-direction: row-reverse;
+ flex-direction: row;
  gap: f.rem(24);
 }
 .posts-feed {
@@ -64,19 +68,23 @@
 }
 
 .post-list {
-
  .post-item {
+  margin-bottom: f.rem(24);
+
+  &:not(:first-child) {
    padding: f.rem(24) 0;
- margin-bottom: f.rem(24);
- 
- &:not(:last-child) {
-  border-bottom: 1px solid v.$color-border;
- }
+  }
+
+  &:not(:last-child) {
+   border-bottom: 1px solid v.$color-border;
+  }
   &__card {
    display: flex;
    justify-content: space-between;
    align-items: center;
+
    &--title {
+    max-width: 50%;
     .post__title {
      font-size: f.rem(18);
      font-weight: bold;
@@ -148,8 +156,28 @@
 }
 
 .sidebar {
- flex: 1;
- display: flex;
- flex-direction: column;
- gap: f.rem(24);
+ display: none;
+ @include m.respond-to('lg') {
+  display: block;
+  flex: 1;
+ }
+
+ ul {
+  display: flex;
+  flex-direction: column;
+  gap: f.rem(32);
+  align-items: center;
+
+  li {
+   width: 290px;
+   height: 290px;
+   background-color: v.$color-bg-gray;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   border-radius: 16px;
+   font-weight: bold;
+   color: v.$color-text-header-secondary;
+  }
+ }
 }
