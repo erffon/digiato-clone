@@ -1,33 +1,54 @@
-@use "../abstracts/variables" as v;
-@use "../abstracts/functions" as f;
-@use "../abstracts/mixins" as m;
+@use '../abstracts/variables' as v;
+@use '../abstracts/functions' as f;
+@use '../abstracts/mixins' as m;
 
 .breadcrumb {
-  width: 100%;
-  padding: f.rem(24) 0;
+ width: 100%;
+ padding: f.rem(24) 0;
 
-  &__items {
-    display: flex;
-    align-items: center;
-    gap: f.rem(8);
+ &__items {
+  display: flex;
+  align-items: center;
+  gap: f.rem(8);
 
-    li {
-      a {
-        font-size: f.rem(12);
-        @include m.respond-to("md") {
-          font-size: f.rem(14);
-        }
-        color: v.$color-text-header-secondary;
-        &:hover {
-          color: v.$color-brand;
-        }
-      }
-
-      &:not(:last-child)::after {
-        content: ">";
-        margin-right: f.rem(8);
-        color: v.$color-text-header-secondary;
-      }
+  li {
+   a {
+    font-size: f.rem(12);
+    @include m.respond-to('md') {
+     font-size: f.rem(14);
     }
+    color: v.$color-text-header-secondary;
+    &:hover {
+     color: v.$color-brand;
+    }
+   }
+
+   &:not(:last-child)::after {
+    content: '>';
+    margin-right: f.rem(8);
+    color: v.$color-text-header-secondary;
+   }
   }
+ }
+}
+.archive-title {
+  padding: 0 f.rem(42) ;
+  margin: f.rem(32) 0 f.rem(72) 0;
+ h1 {
+  @include m.main-title;
+  margin: f.rem(32) 0 f.rem(24) 0;
+  color: v.$color-text-header-secondary;
+
+  span {
+   color: v.$color-text-header;
+  }
+ }
+ &__desc {
+  font-size: f.rem(14);
+  color: v.$color-text-date;
+
+  @include m.respond-to('md') {
+   font-size: f.rem(16);
+  }
+ }
 }
