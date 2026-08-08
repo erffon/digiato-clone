@@ -64,9 +64,10 @@
  display: flex;
  flex-direction: row;
  gap: f.rem(24);
+ justify-content: space-between;
 }
 .posts-feed {
- flex: 2;
+ flex: 2.5;
 }
 
 .post-list {
@@ -85,14 +86,13 @@
    display: flex;
    justify-content: space-between;
    align-items: center;
-   gap: f.rem(20);
+   gap: f.rem(32);
    flex-direction: row-reverse;
-   @include m.respond-to('lg') {
+   @include m.respond-to('md') {
     flex-direction: row;
    }
 
    &--title {
-    max-width: 40%;
     .post__title {
      font-weight: bold;
      line-height: 150%;
@@ -152,9 +152,16 @@
   &__thumbnail {
    a {
     overflow: hidden;
-    height: f.rem(198);
     display: block;
     border-radius: f.rem(16);
+
+    height: f.rem(120);
+    width: f.rem(120);
+    @include m.respond-to('lg'){
+        height: f.rem(198);
+        width: f.rem(198);
+
+    }
     img {
      width: 100%;
      height: 100%;
